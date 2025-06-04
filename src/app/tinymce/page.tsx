@@ -55,6 +55,8 @@ export default function TinyMCEPage() {
           mathjax: {
             lib: "/tinymce/plugins/mathjax/tex-mml-chtml.js",
           },
+          // Đảm bảo không bọc block math trong <p>, vùng bao công thức sẽ vừa khít
+          forced_root_block: false,
         }}
       />
     </div>
