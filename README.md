@@ -1,4 +1,4 @@
 git status
 git add .
-git commit -m "Mô tả ngắn gọn về thay đổi"
+git commit -m "cơ bản"
 git push origin main

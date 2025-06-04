@@ -24,37 +24,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* MathJax preview styling */
-.mathjax-preview {
-  background: #f9fafb;
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-  margin-top: 8px;
-  text-align: center;
-  min-height: 40px;
-  font-size: 1.5rem;
-  color: #222;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mathjax-preview .mjx-chtml {
-  font-family: 'Latin Modern Math', 'STIX Math', 'Cambria Math', 'Times New Roman', serif !important;
-  font-size: 1.5em !important;
-}
-
-span.math-tex,
-.mjx-chtml {
-  font-size: 1em !important;
-  font-family: 'Latin Modern Math', 'STIX Math', 'Cambria Math', 'Times New Roman', serif !important;
-}
-
-p>.math-tex {
-  display: block;
-  text-align: left;
-  margin-left: 0;
-  margin-right: auto;
-}
