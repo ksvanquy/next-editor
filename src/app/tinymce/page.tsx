@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 
 // Dynamic import TinyMCE Editor (chỉ chạy ở client)
@@ -11,7 +11,6 @@ const Editor = dynamic(
 
 export default function TinyMCEPage() {
   const editorRef = useRef<any>(null);
-
   return (
     <div className="max-w-7xl mx-auto mt-10 px-4">
       <Editor

@@ -1,9 +1,105 @@
 /* Đảm bảo block math là block-level và không bị thụt lề */
 .math-tex-block {
-    display: block !important;
-    margin: 16px 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle;
+    margin: 8px 0;
     padding: 2px 8px;
     border-radius: 6px;
+    margin-left: 0 !important;
+}
+
+.math-tex-block:focus {
+    outline: 2px solid #409eff;
+}
+
+.math-tex-block table {
+    margin-left: 0 !important;
+}
+
+/* Loại bỏ padding trái/phải của các ô trong bảng MathJax */
+.math-tex-block mjx-table,
+.math-tex-block mjx-itable,
+.math-tex-block mjx-mtd {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.math-tex-block mjx-mtd:first-child {
+    padding-left: 0 !important;
+}
+
+.mjx-utext,
+.mjx-chtml,
+.mathjax-preview,
+.math-tex,
+.math-tex-block {
+    font-family: 'Latin Modern Math', 'STIX Math', 'Arial Unicode MS', 'Times New Roman', serif !important;
+}
+
+/* MathJax preview styling */
+.mathjax-preview {
+    background: #f9fafb;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    margin-top: 8px;
+    text-align: center;
+    min-height: 40px;
+    font-size: 1.5rem;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mathjax-preview .mjx-chtml {
+    font-family: 'Latin Modern Math', 'STIX Math', 'Cambria Math', 'Times New Roman', serif !important;
+}
+
+span.math-tex {
+    font-family: 'Latin Modern Math', 'STIX Math', 'Cambria Math', 'Times New Roman', serif !important;
+}
+
+/* Block math styling kế thừa căn lề đoạn */
+p>.math-tex {
+    display: block !important;
+    text-align: inherit !important;
+    margin: 0 !important;
+}
+
+p>.math-tex .mjx-chtml {
+    margin: 0 !important;
+    display: block !important;
+    text-align: inherit !important;
+}
+
+/* Căn giữa block math khi đoạn căn giữa */
+p[style*="text-align: center"]>.math-tex,
+p[style*="text-align: center"]>.math-tex .mjx-chtml {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+/* Căn phải block math khi đoạn căn phải */
+p[style*="text-align: right"]>.math-tex,
+p[style*="text-align: right"]>.math-tex .mjx-chtml {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    text-align: right !important;
+}
+
+/* Căn trái block math khi đoạn căn trái */
+p[style*="text-align: left"]>.math-tex,
+p[style*="text-align: left"]>.math-tex .mjx-chtml {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
+}
+
+/* Inline math kế thừa text-align đoạn */
+p[style*="text-align: center"] span.math-tex,
+p[style*="text-align: right"] span.math-tex,
+p[style*="text-align: left"] span.math-tex {
+    text-align: inherit !important;
 }
