@@ -10,7 +10,7 @@ const Editor = dynamic(
 );
 
 export default function TinyMCEPage() {
-  const editorRef = useRef(null);
+  const editorRef = useRef<any>(null);
 
   return (
     <div className="max-w-7xl mx-auto mt-10 px-4">
@@ -55,8 +55,6 @@ export default function TinyMCEPage() {
           mathjax: {
             lib: "/tinymce/plugins/mathjax/tex-mml-chtml.js",
           },
-          // Đảm bảo không bọc block math trong <p>, vùng bao công thức sẽ vừa khít
-          forced_root_block: false,
         }}
       />
     </div>
