@@ -1,0 +1,9 @@
+/* Đảm bảo block math là block-level và không bị thụt lề */
+.math-tex-block {
+    display: block !important;
+    margin: 16px 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 2px 8px;
+    border-radius: 6px;
+}

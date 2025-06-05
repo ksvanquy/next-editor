@@ -55,6 +55,8 @@ export default function TinyMCEPage() {
           mathjax: {
             lib: "/tinymce/plugins/mathjax/tex-mml-chtml.js",
           },
+          forced_root_block: "div",
+          valid_elements: "*[*]",
         }}
       />
     </div>
